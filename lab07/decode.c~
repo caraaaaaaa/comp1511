@@ -1,0 +1,41 @@
+// Lab07
+// decode
+// Zixuan Guo (z513593)
+// 02-04-2019
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int substitution(int character,char *argv);
+
+int main(int argc, char *argv[]) {
+    int ch = getchar();
+    char map[30];
+    int i = 0;
+    while (i < 26){
+        map[argv[1][i] - 96] = i + 97;
+        i = i + 1;
+    }
+    putchar(substitution(ch,map));
+    while (ch != EOF) {
+        ch = getchar();
+        if (ch != EOF) {
+            putchar(substitution(ch,map));
+        }
+    }
+
+    return 0;
+}
+
+int substitution(int character,char *argv){
+    if (character >= 'A' && character <= 'Z') {
+        character = character - 64;
+        character = argv[character] - 32;
+    }else {
+        if (character >= 'a' && character <= 'z') {
+            character = character - 96;
+            character = argv[character];
+        }
+    }
+    return character;
+}

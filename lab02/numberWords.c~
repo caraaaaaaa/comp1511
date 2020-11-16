@@ -1,0 +1,23 @@
+// lab02
+// Numbers to words
+//Zixuan Guo z5173593
+
+#include <stdio.h> 
+
+int main (void) {
+    int number;
+    printf("Please enter an integer: ");
+    scanf("%d", &number);
+    
+    if (number < 1) {
+        printf("You entered a number less than one.\n");
+    } else if (number == 1) {
+        printf("You entered one.\n");
+    } else if (number == 2) {
+        printf("You entered two.\n");
+    } else if (number == 3) {
+        printf("You entered three.\n");
+    } else
+    
+    return 0;
+}

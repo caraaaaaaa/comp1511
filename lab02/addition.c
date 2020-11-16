@@ -1,0 +1,17 @@
+// lab02
+// Addition
+//Zixuan Guo z5173593
+
+#include <stdio.h> 
+
+int main (void) {
+    int a;
+    int b;
+    
+    printf("Please enter two integers: ");
+    scanf("%d %d", &a, &b);
+    
+    printf("%d + %d = %d\n", a, b, a+b);
+  
+    return 0;
+}

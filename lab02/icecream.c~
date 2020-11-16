@@ -1,0 +1,10 @@
+// lab02
+// Icecream Scoops
+//Zixuan Guo z5173593
+
+#include <stdio.h> 
+
+int main (void) {
+    int scoops;
+    int 
+}
