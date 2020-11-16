@@ -1,0 +1,18 @@
+// Lab08 
+// one_per_line
+// Zixuan Guo (z5173593)
+
+#include <stdio.h>
+
+int main (void) {
+    printf("Enter a string: ");
+    
+    char line[4096];
+    int i = 0;
+    fgets(line, 4096, stdin);
+    while (line[i] != '\n') {
+        printf("%c\n", line[i]);
+        i++;
+    }
+    return 0;
+}
