@@ -1,0 +1,29 @@
+else {
+        i = 0;
+        int lala = 0;
+        while (i < number_of_card) {
+            if (Check_prime(card_in_hand[i]) == FALSE) {
+                printf("%d", non_prime[0]);
+                lala = 1;
+                break;
+            } else {
+                i++;
+            }
+        }
+       
+        i = 0;
+        if (lala == 0) {
+            while (i < number_of_card) {
+                if (check_prime(card_in_hand[i] == TRUE)) {
+                    printf("%d", prime[0]);
+                    break;
+                } else {
+                    i++;
+                }
+            }
+        }
+        
+        if (number_of_card == 1) {
+            printf("%d", card_in_hand[0]);
+        }
+    }

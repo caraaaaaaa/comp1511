@@ -1,0 +1,35 @@
+#include <stdio.h> 
+
+    if (position != 0) {
+        int caca = 0;
+        if (Check_prime(this_round[0]) == TRUE) {
+            while (i < number_of_card) {
+                if (Check_prime(card_in_hand[i]) == TRUE) {
+                    caca = card_in_hand[i]
+                    printf("%d", caca);
+                    break;
+                } else {
+                    i++;
+                }
+            }
+            if (caca == 0) {
+                printf("%d", non_prime[0]);
+            }
+        } else {
+            while (i < number_of_card) {
+                if (Check_prime(card_in_hand[i]) == FALSE) {
+                    if (check_coco (this_round[0],card_in_hand[i], 
+                        non_prime, co) == TRUE) {
+                        printf("%d", co[0]);
+                        break;
+                    } else {
+                        i++;
+                    }
+                } else {
+                    printf("%d", prime[0]);
+                    break;
+                }
+            
+            }
+        }
+    }
