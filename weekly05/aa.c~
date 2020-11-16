@@ -1,0 +1,44 @@
+// Weekly Test 5
+// prime factors
+// Zixuan Guo Z5173593
+
+#include <stdio.h>
+#define FALSE 0
+#define TRUE 1
+
+int main (void) {
+    int number;
+    printf("Enter number: ");
+    scanf("%d", &number);
+    int aa = number;
+    int factor = 2;
+    int is_prime = TRUE;
+    while (factor <= number) {
+        if (number % factor == 0) {
+            is_prime = FALSE;
+        }
+        factor++;
+    }
+    
+    if (is_prime == TRUE) {
+        printf("%d is prime\n", number);
+    } else {
+        factor = 1;
+        printf("The prime factorization of %d is:\n", number);
+    }
+    
+    while (factor <= number) {
+        if (factor < number && number % factor == 0) {
+            number = number / factor;
+            printf("%d * ", factor);
+            factor = 2;
+        } else if (factor == number) {
+            printf("%d", factor);
+            break;
+        } else {
+            factor++;
+        }
+    }
+    
+    printf(" = %d\n", aa);
+}
